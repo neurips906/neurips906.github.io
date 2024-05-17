@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Unleashing Multispectral Video’s Potential in Semantic Segmentation: A Semi-supervised Viewpoint and New UAV-View Benchmark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ID: 906</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./files/css/bulma.min.css">
+  <link rel="stylesheet" href="./files/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./files/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./files/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./files/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./files/js/fontawesome.all.min.js"></script>
+  <script src="./files/js/bulma-carousel.min.js"></script>
+  <script src="./files/js/bulma-slider.min.js"></script>
+  <script src="./files/js/index.js"></script>
+  <style>
+  .src-image{
+    margin-bottom: -5%;
+  }
+  .dst-image {
+    margin-top:-95%;
+    opacity: 0;
+    transition: 1s ease-in-out;
+  }
+  .overlay-image:hover .dst-image {
+    opacity: 1;
+  }
+
+  .hover-block {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top:10px;
+  }
+
+  .dst-column {
+    opacity: 0;
+    margin-top:-38.35%;
+    margin-bottom: 10%;
+  }
+  .overlay-column:hover .src-column {
+    opacity: 0;
+  }
+  .overlay-column:hover .dst-column {
+    opacity: 1;
+  }
+
+  caption {
+    padding: 10px;
+    caption-side: bottom;
+    font-weight: 1000;
+  }
+  
+  .center-cropped {
+    object-fit: cover;
+    object-position: center;
+    height: 200px;
+    width: 200px;
+  }
+
+  .center-cropped-auto {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+  #squareImage {
+  width: 100%;
+  }
+
+  .square-text-block {
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .square-text-block-large {
+    width: auto;
+    height: auto;
+    /* overflow: hidden; */
+    /* position: relative; */
+    /* box-sizing: border-box; */
+  }
+  </style>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-size-3 publication-title">
+            Unleashing Multispectral Video’s Potential in Semantic Segmentation: A Semi-supervised Viewpoint and New UAV-View Benchmark
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <br><strong>Anonymous NeurIPS submission</strong><br>
+                <br><strong>Paper ID 906</strong> <br>
+             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero intro">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="intro" autoplay muted loop playsinline height="100%">
+          <source src="./files/resources/Introduction.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"><span class="small-caps">Abstract</span></h2>
+        <div class="content has-text-justified">
+          <p>
+            Semantic segmentation using multispectral video inputs (MVSS) has recently sparked interest for
+            enhancing robustness of segmentation models in poor light and dynamic real-world scenes. 
+            However, progression in this domain is constrained by a solitary dataset and a lack of viewpoint diversity. 
+            In this paper, we introduce a new MVSS dataset named MVUAV, encompassing 413 high-quality multispectral 
+            videos captured via Unmanned Aerial Vehicles (UAVs) from oblique bird's-eye viewpoints. 
+            It comprises 53,828 paired RGB-Thermal frames, with 2,183 pairs meticulously annotated with dense 
+            semantic labels, covering 36 semantic categories at a high pixel-wise annotation rate of 99.18%. 
+            The dataset presents intricate challenges, such as varying object scales, fine-grained scene parsing, 
+            moving object segmentation, and variable illumination conditions, making it a valuable asset for spurring 
+            further innovations in robust semantic segmentation. Meanwhile, we note that pixel-wise semantic labeling 
+            is very labor-extensive and costly, posing a challenge for large-scale multispectral video annotation. 
+            To mitigate this, we present a simple yet effective semi-supervised MVSS framework named SemiMV. 
+            It is, to our knowledge, the first semi-supervised model designed specifically for processing both 
+            labeled and unlabeled multispectral video data. Our comprehensive experiments on MVSeg and MVUAV datasets 
+            demonstrate the efficacy of our approach and highlight the promising potential of semi-supervised 
+            learning in the MVSS field. <br>
+            <br>
+            <strong> Our dataset, source code, and project website will be made publicly available. </strong>         
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+
+        <h3 class="title is-3">New MVUAV Dataset</h3>
+
+        <div class="content has-text-justified">
+            <p>It showcases the characteristic of multispectral UAV videos toward robust semantic segmentation.</p>
+        </div>
+
+        <div class="content has-text-centered">
+            <video id="horse-real" autoplay controls muted preload loop playsinline style="max-width: 100%; display: block; margin: auto;">
+              <source src="./files/resources/Capture.mp4"
+                      type="video/mp4">
+            </video>
+        </div>
+        <br>
+
+        <div class="title is-5 has-text-justified">
+            <p>MVUAV Examples</p>
+        </div>
+        <div class="content has-text-justified">
+            <p>We visualize some examples of the newly-proposed MVUAV dataset.</p>
+        </div>
+        <div class="content has-text-centered">
+            <video id="horse-real" autoplay controls muted preload loop playsinline style="max-width: 100%; display: block; margin: auto;">
+              <source src="./files/resources/MVUAV.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+  
+          <h3 class="title is-3">New Semi-MVSS Setting</h3>
+  
+          <div class="content has-text-justified">
+              <p>We illustrate the semi-supervised MVSS setting, and the differences over previous related works.</p>
+          </div>
+  
+          <div class="content has-text-centered">
+              <video id="horse-real" autoplay controls muted preload loop playsinline style="max-width: 100%; display: block; margin: auto;">
+                <source src="./files/resources/SemiMVSS.mp4"
+                        type="video/mp4">
+              </video>
+          </div>
+          <br>
+  
+          <div class="title is-5 has-text-justified">
+              <p>Visual Examples</p>
+          </div>
+          <div class="content has-text-justified">
+              <p>We visualize some multispectral video sequences alongside the segmentation results obtained using the SupOnly baseline and our SemiMV method. 
+                Obviously, our SemiMV produces more accurate segmentation predictions by effectively engaging both labeled and unlabeled multispectral videos.
+              </p>
+          </div>
+          <div class="content has-text-centered">
+              <video id="horse-real" autoplay controls muted preload loop playsinline style="max-width: 100%; display: block; margin: auto;">
+                <source src="./files/resources/Results.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <div class="content has-text-justified">
+    <strong>More details about our dataset and method can refer to our submission.</strong>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="content">
+        <p>
+          This website is anonymous and does not contain any author information. <a href="https://github.com/nerfies/nerfies.github.io">Web Template.</a> 
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
