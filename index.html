@@ -138,22 +138,22 @@
         <h2 class="title is-3"><span class="small-caps">Abstract</span></h2>
         <div class="content has-text-justified">
           <p>
-            Semantic segmentation using multispectral video inputs (MVSS) has recently sparked interest for
-            enhancing robustness of segmentation models in poor light and dynamic real-world scenes. 
-            However, progression in this domain is constrained by a solitary dataset and a lack of viewpoint diversity. 
-            In this paper, we introduce a new MVSS dataset named MVUAV, encompassing 413 high-quality multispectral 
-            videos captured via Unmanned Aerial Vehicles (UAVs) from oblique bird's-eye viewpoints. 
-            It comprises 53,828 paired RGB-Thermal frames, with 2,183 pairs meticulously annotated with dense 
-            semantic labels, covering 36 semantic categories at a high pixel-wise annotation rate of 99.18%. 
-            The dataset presents intricate challenges, such as varying object scales, fine-grained scene parsing, 
-            moving object segmentation, and variable illumination conditions, making it a valuable asset for spurring 
-            further innovations in robust semantic segmentation. Meanwhile, we note that pixel-wise semantic labeling 
-            is very labor-extensive and costly, posing a challenge for large-scale multispectral video annotation. 
-            To mitigate this, we present a simple yet effective semi-supervised MVSS framework named SemiMV. 
-            It is, to our knowledge, the first semi-supervised model designed specifically for processing both 
-            labeled and unlabeled multispectral video data. Our comprehensive experiments on MVSeg and MVUAV datasets 
-            demonstrate the efficacy of our approach and highlight the promising potential of semi-supervised 
-            learning in the MVSS field. <br>
+            Thanks to the rapid progress in RGB & thermal imaging, also known as multispectral imaging, 
+            the task of multispectral video semantic segmentation, or MVSS in short, 
+            has recently drawn significant attentions. 
+            Noticeably, it offers new opportunities in improving segmentation performance under unfavorable visual conditions such as poor light or overexposure. 
+            Unfortunately, there are currently very few datasets available, 
+            including for example MVSeg dataset that focuses purely toward eye-level view; 
+            and it features the sparse annotation nature due to the intensive demands of labeling process. 
+            To confront these challenges, this paper presents two major contributions to advance MVSS: 
+            the introduction of MVUAV, a new MVSS benchmark dataset, and the development of a dedicated semi-supervised MVSS baseline - SemiMV. 
+            Our MVUAV dataset is captured via Unmanned Aerial Vehicles (UAV), 
+            which offers a unique oblique bird’s-eye view complementary to the existing MVSS datasets; 
+            it also encompasses a broad range of day/night lighting conditions and over 30 semantic categories. 
+            In the meantime, to better leverage the sparse annotations and extra unlabeled RGB-Thermal videos, 
+            a semi-supervised learning baseline, SemiMV, 
+            is proposed to enforce consistency regularization through a dedicated Cross-collaborative Consistency Learning (C3L) module and a denoised temporal aggregation strategy. 
+            Comprehensive empirical evaluations on both MVSeg and MVUAV benchmark datasets have showcased the efficacy of our SemiMV baseline. <br>
             <br>
             <strong> Our dataset, source code, and project website will be made publicly available. </strong>         
           </p>
